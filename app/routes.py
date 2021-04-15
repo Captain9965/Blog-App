@@ -5,7 +5,17 @@ from app import app
 @app.route('/index')
 def index():
     user={'username': 'Lenny'}  # mock object
-    return render_template('index.html', title='Home', user=user)   #invokes the Jinja2 template engine that comes bundled with the Flask framework. Jinja2 substitutes {{ ... }} blocks with the corresponding values, given by the arguments provided in the render_template() call.
+    posts = [
+        {
+            'author': {'username': 'Kelvin'},
+            'body': 'All have a blessed day!'
+        },
+        {
+            'author': {'username': 'Sue'},
+            'body': 'Bike riding is super awesome!'
+        }
+    ]
+    return render_template('index.html', title='Home', user=user, posts=posts)
 
 
 

@@ -21,7 +21,7 @@ def index():
 @app.route('/login', methods=['GET','POST'])    # Login route
 def login():
     form=LoginForm()
-    if form.validate_on_submit():
+    if form.validate_on_submit():       # runs all field validators and teturns true
         flash('Login requested for user {}, remember_me={}'.format(
             form.username.data, form.remember_me.data))         # display message to the user
         return redirect(url_for('index'))

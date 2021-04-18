@@ -2,3 +2,4 @@
 venv/
 # _pycache__
 __pycache__/
+app.db

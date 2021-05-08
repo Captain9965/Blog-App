@@ -12,6 +12,8 @@ class Config(object):
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     ADMINS = ['lennyweda@gmail.com']
     POSTS_PER_PAGE = 25
+    START_NGROK = os.environ.get('START_NGROK') is not None and \
+        os.environ.get('WERKZEUG_RUN_MAIN') is not 'true'
 
 
 

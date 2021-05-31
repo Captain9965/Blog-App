@@ -1,7 +1,5 @@
 # Virtual environment
 venv/
-# _pycache__
 __pycache__/
 app.db
 logs/
-tests.py 
